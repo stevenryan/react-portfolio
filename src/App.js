@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Toolbar from './Components/Toolbar/Toolbar';
+import Sidebar from './Components/Sidebar/Sidebar';
+import Backdrop from './Components/Backdrop/Backdrop';
+
 class App extends Component {
+  state = {
+    sidebarOpen: false
+  };
+
+  sidebarToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {sidebarOpen: !prevState.sidebarOpen};
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({sidebarOpen: false});
+  };
+
   render() {
+    let backdrop;
+
+    if (this.state.sidebarOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Toolbar sidebarClickHandler={this.sidebarToggleClickHandler} />
+        <Sidebar show={this.state.sidebarOpen} />
+        {backdrop}
+        <main style={{marginTop: '78px'}}>
+          <p>PAGE CONTENT</p>
+        </main>
       </div>
     );
   }
