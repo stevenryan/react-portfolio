@@ -4,6 +4,7 @@ import './App.css';
 import Toolbar from './Components/Toolbar/Toolbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Backdrop from './Components/Backdrop/Backdrop';
+import HomeVideo from './Components/Section/HomeVideo/HomeVideo';
 
 class App extends Component {
   state = {
@@ -32,8 +33,8 @@ class App extends Component {
         <Toolbar sidebarClickHandler={this.sidebarToggleClickHandler} />
         <Sidebar show={this.state.sidebarOpen} />
         {backdrop}
-        <main style={{marginTop: '78px'}}>
-          <p>PAGE CONTENT</p>
+        <main style={{zIndex: '1'}}>
+          <HomeVideo />
         </main>
       </div>
     );

@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+
+.homeVideoContainer {
+    position: relative;
+    /* position: fixed; */
+    /* padding-bottom: 56.25%; */
+    padding-top: 25;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+    pointer-events: none;
+    overflow:hidden;
+    height:100vh;
+}
+
+.homeVideo {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: calc(100% + 120px);
+    pointer-events: none;
+    object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .homeVideoContainer{ 
+        height: 100vh; 
+        top: -100%; 
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .homeVideoContainer{ 
+        width: 300%; 
+        left: -100%; 
+    }
+}
+@media (max-width:408px) {
+    .homeVideoContainer{ 
+        width: 350%;
+    }
+}
