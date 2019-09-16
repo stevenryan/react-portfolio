@@ -8,7 +8,7 @@ const toolbar = props => (
             <div className="toolbar__toggle-container">
                 <SidebarToggleButton click={props.sidebarClickHandler} />
             </div>
-            <div className="toolbar__logo"><a href="/">Logo</a></div>
+            <div className="toolbar__logo"><a href="/"><img src='pixel-face.png' alt="site logo" className="logoImg"/></a></div>
             <div className="toolbar__navigation-items">
                 <ul>
                     <li><a href="/">HOME</a></li>

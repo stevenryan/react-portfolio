@@ -15,10 +15,18 @@
     padding: 0 1rem;
 }
 
+.toolbar__logo {
+    display: block;
+}
 .toolbar__logo a {
+    height: 100%;
+    display: flex;
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+}
+.logoImg {
+    width: 54px;
+    height: 54px;
 }
 
 .toolbar__navigation-items {
