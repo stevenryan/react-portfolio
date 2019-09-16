@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 
-.homeVideoContainer {
+.homeVideo-container {
     position: relative;
     /* position: fixed; */
     /* padding-bottom: 56.25%; */
@@ -24,19 +24,19 @@
 }
 
 @media (min-aspect-ratio: 16/9) {
-    .homeVideoContainer{ 
+    .homeVideo-container{ 
         height: 100vh; 
         top: -100%; 
     }
 }
 @media (max-aspect-ratio: 16/9) {
-    .homeVideoContainer{ 
+    .homeVideo-container{ 
         width: 300%; 
         left: -100%; 
     }
 }
 @media (max-width:408px) {
-    .homeVideoContainer{ 
+    .homeVideo-container{ 
         width: 350%;
     }
 }
